@@ -1,4 +1,9 @@
-﻿Introduction and about:
+﻿CCDDrone UW23
+Updates to CCDDrone and CCDSequencer
+
+
+
+Introduction and about:
 -----------------------------------------------------------
 
 CCDDrone is a replacement for Owl in the operation of CCDs with a Leach system. This is designed to mostly work in conjunction with the super-sequencer, but you can use it with any sequencer of your choosing.
