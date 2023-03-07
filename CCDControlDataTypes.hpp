@@ -44,6 +44,10 @@ struct CCDVariables{
     int Gain;
     int ItgSpeed;
 
+    int nSerialFlush;
+//    int flush_parallel;
+
+
 };
 
 struct ClockVariables{

@@ -85,6 +85,7 @@ void LeachController::ApplyAllCCDBasic(void ){
 
     if (this->CCDParams.CCDType == "SK"){
         this->SetSSR();
+	this->SetSSF();
     }
 
 }

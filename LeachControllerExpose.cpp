@@ -62,7 +62,8 @@ void LeachController::PrepareAndExposeCCD(int ExposureTime)
 
         if (this->CCDParams.CCDType == "SK") this->SetSSR();
         else this->CCDParams.nSkipperR = 1;
-
+	//set serial flushing
+	this->SetSSF();
         /*Needed for callbacks during exposure*/
         CExposeListener cExposeListener(*this);
 

@@ -160,7 +160,20 @@ int LeachController::SetSSR(void )
 
 
 }
+int LeachController::SetSSF(void )
+{
 
+    int dReply = 0;
+    dReply = pArcDev->Command( TIM_ID, SSF, this->CCDParams.nSerialFlush);
+    if ( dReply == 0x00444F4E ) {
+        return 0;
+    } else {
+        printf("Error setting serial flush parameters %X\n", dReply);
+        return -1;
+    }
+
+
+}
 
 void LeachController::ApplyNewSequencer(std::string seqFile)
 {

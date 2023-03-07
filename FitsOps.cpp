@@ -50,6 +50,8 @@ void LeachController::SaveFits(std::string outFileName, void *data_ptr, int numF
     fits_write_key(fptr, TSTRING, "CCDType", (char*) this->CCDParams.CCDType.c_str(), "CCD Type (DES or SK)", &status);
     fits_write_key(fptr, TFLOAT, "Exp", &this->CCDParams.fExpTime, "Exposure time (s)", &status);
     fits_write_key(fptr, TSHORT, "NDCMs", &this->CCDParams.nSkipperR, "Number of charge measurements", &status);
+    fits_write_key(fptr, TSHORT, "NSFLUSH", &this->CCDParams.nSerialFlush, "Number of Serial Register Flushes", &status);
+
     fits_write_key(fptr, TSTRING, "AMPL", (char*) this->CCDParams.AmplifierDirection.c_str(), "Amplifier(s) used", &status);
     fits_write_comment(fptr, SequencerUsed.c_str(), &status);
     fits_write_key(fptr, TBYTE, "SUPERSE", &this->CCDParams.super_sequencer, "Super sequencer (SSeq) used?", &status);

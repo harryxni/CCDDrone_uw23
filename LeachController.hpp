@@ -54,6 +54,7 @@
 #define CPP 0x00435050
 #define HLD 0x00484C44
 
+#define SSF 0x00535346
 
 class LeachController
 {
@@ -116,6 +117,9 @@ private:
     int SetHDR(void);
     int SelectAmplifierAndHClocks(void);
     int CalculateTiming(double );
+
+    int SetSSF(void );
+
 
     /*LeachControllerExpose - private part*/
     void ExposeCCD( float fExpTime, const bool& bAbort = false,

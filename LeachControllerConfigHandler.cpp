@@ -102,6 +102,12 @@ void LeachController::ParseCCDSettings(CCDVariables &_CCDSettings, ClockVariable
         _CCDSettings.Gain = 1;
     }
 
+    _CCDSettings.nSerialFlush = _LeachConfig.GetInteger("ccd", "Serial_flush", 0);
+//    _CCDSettings.ParallelFlush = _LeachConfig.GetInteger("ccd", "Parallel_flush",0);
+
+
+
+
 
     /*Timing Settings*/
     _CCDSettings.IntegralTime = _LeachConfig.GetReal("timing","IntegralTime",30.0);
